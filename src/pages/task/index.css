@@ -20,3 +20,21 @@ section:not(:first-child) {
   padding-top: 1rem;
   padding-inline: 1rem;
 }
+
+.test {
+  border: 2px solid #999;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.test:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
+.test .input-group-text {
+  width: 70px;
+}
+
+button.edit-btn {
+  width: 90px;
+}
