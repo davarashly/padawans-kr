@@ -25,6 +25,7 @@ section:not(:first-child) {
   border: 2px solid #999;
   border-radius: 1rem;
   padding: 1rem;
+  position: relative;
 }
 
 .test:not(:first-of-type) {
@@ -32,9 +33,30 @@ section:not(:first-child) {
 }
 
 .test .input-group-text {
-  width: 70px;
+  width: 120px;
 }
 
 button.edit-btn {
-  width: 90px;
+  width: 175px;
+}
+
+.test .close {
+  position: absolute;
+  font-weight: bold;
+  top: 0px;
+  right: 2px;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: 0.265s;
+  user-select: none;
+}
+
+.test:hover .close {
+  color: #dc3545;
 }
