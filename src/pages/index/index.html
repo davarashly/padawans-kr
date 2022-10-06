@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="/src/pages/index/index.js" type="module" defer></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="app" class="container-fluid py-3" style="max-width: 1500px">
+      <div class="row d-sm-flex align-items-center h-100">
+        <div class="col-sm-7 overflow-auto h-100">
+          <div class="description">
+            <div class="d-flex align-items-center pb-3">
+              <h2 class="me-4">Пример № 1.</h2>
+              <button class="btn btn-dark">Активировать пример</button>
+            </div>
+            <section>
+              <h4>1) Задача. Составить уравнение заданной окружности</h4>
+              <b>Условие:</b>
+              <p>
+                Составьте уравнение окружности с центром в точке
+                <code>O (2;-3)</code> и радиусом <code>R = 4</code>.
+              </p>
+              <hr />
+              <b>Решение:</b>
+              <p>
+                Обратимся к формуле уравнения окружности:
+                <code>(x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup> = R<sup>2</sup></code>
+              </p>
+              <p>
+                Подставим значения в формулу: <br />
+                Радиус окружности <code>R = 4</code>. <br />
+                Координаты центра окружности <b>(в соответствии с условием):</b> <br />
+                <code>a = 2</code> <br />
+                <code>b = -3</code>
+              </p>
+              <p>
+                Получаем: <br />
+                <code>(x — 2)<sup>2</sup> + (y - (-3))<sup>2</sup> = 4<sup>2</sup></code>
+                <br />
+                или <br />
+                <code>(x — 2)<sup>2</sup> + (y + 3)<sup>2</sup> = 16</code>.
+              </p>
+            </section>
+            <section>
+              <h4>2) Задача. Находится ли точка внутри окружности</h4>
+              <b>Условие:</b>
+              <p>
+                Проверить, находится ли точка <code>A(2;3)</code> внутри окружности с уравнением
+                <code>(x — 2)<sup>2</sup> + (y + 3)<sup>2</sup> = 16</code>.
+              </p>
+              <hr />
+              <b>Решение:</b>
+              <p>
+                Если точка находится внутри данной окружности, то данное выражение должно быть верно: <br />
+                <code>(x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup> &le; R<sup>2</sup></code
+                >. <br />
+                В нашем случае: <br />
+                <code>(x — 2)<sup>2</sup> + (y + 3)<sup>2</sup> &le; 16</code>.
+              </p>
+              <p>
+                В выражение
+                <code>(x — 2)<sup>2</sup> + (y + 3)<sup>2</sup> &le; 16</code>
+                подставим, согласно условию, координаты точки
+                <code>A (2;3)</code>, то есть:<br />
+                <code>x = 2</code> <br />
+                <code>y = 3</code>
+              </p>
+              <p>
+                Проверим истинность полученного равенства:
+                <br />
+                <code>(x — 2)<sup>2</sup> + (y + 3)<sup>2</sup> &le; 16</code>
+                <br />
+                <code>(2 — 2)<sup>2</sup> + (3 + 3)<sup>2</sup> &le; 16</code><br />
+                <code>0 + 36 &le; 16</code><br />
+                <b>равенство неверно, 36 > 16</b><br />
+                Таким образом, заданная точка <b>не находится</b> внутри заданной окружности.
+              </p>
+            </section>
+            <section class="p-0"></section>
+            <div class="d-flex align-items-center py-3">
+              <h2 class="me-4">Пример № 2.</h2>
+              <button class="btn btn-dark">Активировать пример</button>
+            </div>
+            <section>
+              <h4>1) Задача. Составить уравнение заданной окружности</h4>
+              <b>Условие:</b>
+              <p>
+                Составьте уравнение окружности с центром в точке
+                <code>O (-1;2)</code> и радиусом <code>R = 4</code>.
+              </p>
+              <hr />
+              <b>Решение:</b>
+              <p>
+                Обратимся к формуле уравнения окружности:
+                <code>(x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup> = R<sup>2</sup></code>
+              </p>
+              <p>
+                Подставим значения в формулу: <br />
+                Радиус окружности <code>R = 4</code>. <br />
+                Координаты центра окружности <b>(в соответствии с условием):</b> <br />
+                <code>a = -1</code> <br />
+                <code>b = 2</code>
+              </p>
+              <p>
+                Получаем: <br />
+                <code>(x — (-1))<sup>2</sup> + (y - 2)<sup>2</sup> = 4<sup>2</sup></code>
+                <br />
+                или <br />
+                <code>(x + 1)<sup>2</sup> + (y - 2)<sup>2</sup> = 16</code>.
+              </p>
+            </section>
+            <section>
+              <h4>2) Задача. Находится ли точка внутри окружности</h4>
+              <b>Условие:</b>
+              <p>
+                Проверить, находится ли точка <code>A(2;3)</code> внутри окружности с уравнением
+                <code>(x + 1)<sup>2</sup> + (y - 2)<sup>2</sup> = 16</code>.
+              </p>
+              <hr />
+              <b>Решение:</b>
+              <p>
+                Если точка находится внутри данной окружности, то данное выражение должно быть верно: <br />
+                <code>(x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup> &le; R<sup>2</sup></code
+                >. <br />
+                В нашем случае: <br />
+                <code>(x + 1)<sup>2</sup> + (y - 2)<sup>2</sup> &le; 16</code>.
+              </p>
+              <p>
+                В выражение
+                <code>(x + 1)<sup>2</sup> + (y - 2)<sup>2</sup> &le; 16</code>. подставим, согласно условию, координаты
+                точки <code>A (2;3)</code>, то есть:<br />
+                <code>x = 2</code> <br />
+                <code>y = 3</code>
+              </p>
+              <p>
+                Проверим истинность полученного равенства:
+                <br />
+                <code>(x + 1)<sup>2</sup> + (y - 2)<sup>2</sup> &le; 16</code>.
+                <br />
+                <code>(2 + 1)<sup>2</sup> + (3 - 2)<sup>2</sup> &le; 16</code>. <br />
+                <code>3 + 1 &le; 16</code><br />
+                <b>равенство верно, 4 &lt; 16</b><br />
+                Таким образом, заданная точка <b>находится</b> внутри заданной окружности.
+              </p>
+            </section>
+          </div>
+        </div>
+        <div class="col-sm-5 sticky-top">
+          <canvas></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
