@@ -87,13 +87,24 @@ export const makeTestHtml = (test, idx) => `<div class="test">
                   <label>Label</label>
                 </div>
               </div>
-               <button onclick="draw(${idx}, document.querySelector('canvas').getContext('2d'))" class="btn btn-primary ms-auto d-flex mt-3 align-items-center justify-content-center edit-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-palette2 me-2" viewBox="0 0 16 16">
-                    <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z"/>
-                    <path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z"/>
-                  </svg>
-                Draw
-              </button>
+              <div class="d-flex align-items-center justify-content-between mt-3">
+                <p class="mb-0">&nbsp;</p>
+                <div class="d-flex align-items-center justify-content-between">
+                   <button class="btn btn-primary d-flex align-items-center justify-content-center me-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected me-2" viewBox="0 0 16 16">
+                        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                      </svg>
+                    Test
+                  </button>
+                  <button onclick="draw(document.querySelector('canvas').getContext('2d'), ${idx})" class="btn btn-primary d-flex align-items-center justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-palette2 me-2" viewBox="0 0 16 16">
+                        <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z"/>
+                        <path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z"/>
+                      </svg>
+                    Draw
+                  </button>
+                </div>
+              </div>
             </div>`
 
 export const toggleEdit = (ctx) => {
@@ -159,7 +170,7 @@ export const editHandler = (ctx) => (evt) => {
   toggleEdit(ctx)
 }
 
-window.draw = (idx, ctx) => {
+window.draw = (ctx, idx) => {
   renderedTestIdx = idx
 
   requestAnimationFrame(() => draw(ctx, testData[idx].circle, testData[idx].dot))

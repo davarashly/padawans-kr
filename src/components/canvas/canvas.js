@@ -124,7 +124,7 @@ export const draw = (ctx, circle = { radius: 1, startX: 0, startY: 0 }, dot = { 
   drawLines(ctx, linesAmount)
   drawDot(ctx, linesAmount, dot)
 
-  requestAnimationFrame(draw.bind(null, ctx, circle, dot))
+  requestAnimationFrame(() => draw(ctx, circle, dot))
 }
 
 const setupCanvas = (selector = "canvas") => {
