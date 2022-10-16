@@ -69,7 +69,7 @@ button.edit-btn {
   color: red;
 }
 
-.btn-checkall {
+.btn-check-all {
   border-radius: 7px;
   font-size: 18px;
   background-color: black;
@@ -79,4 +79,3 @@ button.edit-btn {
   border: none;
   margin-right: 480px;
 }
-

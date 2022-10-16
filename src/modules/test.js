@@ -1,4 +1,3 @@
-import { Button } from "bootstrap"
 import { draw } from "../components/canvas/canvas.js"
 
 let editing = false
@@ -183,27 +182,24 @@ window.draw = (ctx, idx) => {
  * @param idx - индекс теста, совпадает с индексами из массива testData.
  */
 const calculate = (idx) => {
-  const p = Array.from(document.querySelectorAll("p"))
+  const pTags = Array.from(document.querySelectorAll("p"))
 
-  const circle = testData[idx].circle
-  const dot = testData[idx].dot
-  const radius = testData[idx].circle.radius
+  const { circle, dot } = testData[idx]
 
-  const formulaDot = Math.pow(dot.x - circle.x, 2) + Math.pow(dot.y - circle.y, 2)
-  const radiusFormula = Math.pow(radius, 2)
+  const isInside = Math.pow(dot.x - circle.x, 2) + Math.pow(dot.y - circle.y, 2) <= Math.pow(circle.radius, 2)
 
-  if (formulaDot <= radiusFormula) {
-    p[idx].innerText = "Ответ: точка находится в окружности"
-    p[idx].classList.remove("text-danger")
-    p[idx].classList.add("text-success")
-  } else if (formulaDot >= radiusFormula) {
-    p[idx].innerText = "Ответ: точка не находится в окружности"
-    p[idx].classList.remove("text-success")
-    p[idx].classList.add("text-danger")
+  if (isInside) {
+    pTags[idx].innerText = "Ответ: точка находится в окружности"
+
+    pTags[idx].classList.remove("text-danger")
+    pTags[idx].classList.add("text-success")
+  } else {
+    pTags[idx].innerText = "Ответ: точка не находится в окружности"
+
+    pTags[idx].classList.remove("text-success")
+    pTags[idx].classList.add("text-danger")
   }
 }
-
-
 
 window.calculate = calculate
 window.removeTest = (idx) => {
